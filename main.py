@@ -1,4 +1,5 @@
 import cv2
+#password is "12345"
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
@@ -58,9 +59,9 @@ try:
         def send_email(receiver, subject, message):
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login('rakibshakib007@gmail.com', "mnpqzrpctgkatdxj")
+            server.login('sender address', "sender app password")
             email = EmailMessage()
-            email['From'] = 'rakibshakib007@gmail.com'
+            email['From'] = 'sender address'
             email['To'] = receiver
             email['Subject'] = subject
             email.set_content(message)
@@ -68,7 +69,7 @@ try:
 
 
         email_list = {
-            'rakib': 'asibur247@gmail.com'
+            'receiver name': 'receiver address'
         }
 
         def run_alexa():
@@ -102,7 +103,7 @@ try:
                     webbrowser.open('https://www.youtube.com/')
                 elif 'open email' in command:
                     talk('opening email')
-                    webbrowser.open('https://mail.google.com/mail/u/0/#inbox')
+                    webbrowser.open('https://mail.google.com')
                 elif 'open google' in command:
                     talk('opening google')
                     webbrowser.open('https://www.google.com/')
@@ -114,7 +115,7 @@ try:
                     pywhatkit.search(command)
                 elif 'open my course' in command:
                     talk('opening your course')
-                    course_Path = 'C:\\Users\\RAKIB\\Downloads\\2021 Complete Python Bootcamp From Zero to Hero in Python'
+                    course_Path = 'address'
                     os.startfile(course_Path)
                 elif 'screenshot' in command:
                     talk('screenshot')
